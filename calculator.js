@@ -85,7 +85,7 @@ btnTotal.addEventListener("click", function () {
         result = parseFloat(firstValue) - parseFloat(secondValue);
     }
 
-    display.value = secondValue;
+    display.value = result;
 });
 
 multiply.addEventListener("click", function () {
