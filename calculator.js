@@ -7,8 +7,6 @@ let multiply = document.getElementById("btnMultiply");
 let divide = document.getElementById("btnDivide");
 let subtract = document.getElementById("btnSubtract");
 
-let selectedOperation;
-
 back.addEventListener("click", function () {
     display.value += ".";
 });
@@ -58,52 +56,62 @@ btnZero.addEventListener("click", function () {
     display.value += "0";
 });
 
-let firstValue;
+let firstValue, secondValue, selectedOperation;
 
 btnAdd.addEventListener("click", function () {
     firstValue = display.value;
+    secondValue = null;
     selectedOperation = "Add";
     display.value = "";
 });
 
 
 btnTotal.addEventListener("click", function () {
-    let secondValue;
-    if (selectedOperation == "Add") {
-        secondValue = parseFloat(firstValue) + parseFloat(display.value);
-    } else if (selectedOperation == "Multiply") {
-        secondValue = parseFloat(firstValue) * parseFloat(display.value);
-    }
-    else if (selectedOperation == "divide") {
-        secondValue = parseFloat(firstValue) / parseFloat(display.value);
-    }
-    else if (selectedOperation == "subtract") {
-        secondValue = parseFloat(firstValue) - parseFloat(display.value);
+    if (secondValue == null) {
+        secondValue = display.value;
     }
 
+    let result;
+
+    if (selectedOperation == "Add") {
+        result = parseFloat(firstValue) + parseFloat(secondValue);
+    } else if (selectedOperation == "Multiply") {
+        result = parseFloat(firstValue) * parseFloat(secondValue);
+    }
+    else if (selectedOperation == "divide") {
+        result = parseFloat(firstValue) / parseFloat(secondValue);
+    }
+    else if (selectedOperation == "subtract") {
+        result = parseFloat(firstValue) - parseFloat(secondValue);
+    }
 
     display.value = secondValue;
 });
 
 multiply.addEventListener("click", function () {
     firstValue = display.value;
+    secondValue = null;
     selectedOperation = "Multiply";
     display.value = "";
 });
 
 divide.addEventListener("click", function () {
     firstValue = display.value;
+    secondValue = null;
     selectedOperation = "divide";
     display.value = "";
 });
 
 subtract.addEventListener("click", function () {
     firstValue = display.value;
+    secondValue = null;
     selectedOperation = "subtract";
     display.value = "";
 
 });
 
 btnClear.addEventListener("click", function () {
+    firstValue = null;
+    secondValue = null;
     display.value = "";
 });
