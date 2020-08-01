@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Calculator - &Iqbal;</title>
+    <style>
+        #calc-contain {
+            position: relative;
+            width: 400px;
+            border: 8px solid rgb(35, 12, 167);
+            border-radius: 10px;
+            margin: 10px auto;
+            padding: 5px 10px 5px 5px;
+        }
+
+        #agh {
+            position: relative;
+            float: right;
+            margin-top: 30px;
+        }
+
+        #agh p {
+            font-size: 30px;
+            font-weight: 900;
+        }
+
+        input[type=button] {
+            background: rgb(28, 14, 230);
+            width: 45%;
+            font-size: 30px;
+            font-weight: 900;
+            border-radius: 7px;
+            margin-left: 13px;
+            margin-top: 10px;
+        }
+
+        input[type=button]:active {
+            background-color: #4c19c4;
+            box-shadow: 0 5px rgb(14, 177, 241);
+            transform: translateY(4px);
+        }
+
+        input[type=button]:hover {
+            background-color: #1dcaf5;
+            color: rgb(66, 5, 235);
+        }
+
+        input[type=text] {
+            position: relative;
+            display: block;
+            width: 95%;
+            margin: 5px auto;
+            font-size: 20px;
+            padding: 10px;
+            box-shadow: 4px 0px 12px rgb(18, 242, 250) inset;
+        }
+    </style>
+</head>
+
+<body>
+    <div id='calc-contain'>
+        <input type="text" id="display" readonly = "true"/>
+        <br>
+
+        <input type="button" value=" 1/one " id="btnOne" />
+        <input type="button" value=" 2/two " id="btnTwo" />
+        <input type="button" value=" 3 /three" id="btnThree" />
+        <input type="button" value=" Add/+ " id="btnAdd" />
+        <br />
+
+        <input type="button" value=" 4 /four" id="btnFour" />
+        <input type="button" value=" 5/five " id="btnFive" />
+        <input type="button" value=" 6/six " id="btnSix" />
+        <input type="button" value=" subtract/- " id="btnSubtract" />
+        </br>
+
+        <input type="button" value=" 7/seven " id="btnSeven" />
+        <input type="button" value=" 8/eight " id="btnEight" />
+        <input type="button" value=" 9/nine " id="btnNine" />
+        <input type="button" value=" Multiply/* " id="btnMultiply" />
+        </br>
+
+        <input type="button" value=" Clear/C " id="btnClear" />
+        <input type="button" value=" 0/zero" id="btnZero" />
+        <input type="button" value=" =/Total " id="btnTotal" />
+        <input type="button" value=" Divide/\ " id="btnDivide" />
+        </br>
+
+        <input type="button" value=" decimal/." id="btnBack" />
+        <input type="button" value="&copy;Iqbal" id="btnCopy" />
+
+    </div>
+
+    <script src="./calculator.js"></script>
+</body>
+
+</html>
