@@ -84,7 +84,7 @@ btnTotal.addEventListener("click", function () {
     else if (selectedOperation == "subtract") {
         result = parseFloat(firstValue) - parseFloat(secondValue);
     }
-
+    firstValue = result;
     display.value = result;
 });
 
